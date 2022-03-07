@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.css';
 
 import {useDisplayInput} from "./common/hooks";
 
 import Input from "./components/atoms/Input";
+import Grid from "./components/Grid";
 
 function App() {
     const {input} = useDisplayInput("");
@@ -11,12 +11,7 @@ function App() {
 
     return (
         <div className="App">
-            <header className="App-header">
-
-                <Input
-                    {...input}
-                />
-            </header>
+            <Grid />
         </div>
     );
 }
