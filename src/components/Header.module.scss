@@ -1,7 +1,51 @@
 @import "variables";
 
 .header {
-  background-color: $background-gray;
+  //background-color: $background-gray;
   height: 60px;
   border-bottom: $border-gray 1px solid;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-inline: 100px;
+
+  & > span {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    h1 {
+      color: $theme-color;
+      font-size: 30px;
+      font-weight: 700;
+    }
+  }
+}
+
+.toolBar {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.tool {
+  border: none;
+  background-color: $dark-background;
+  border-radius: 8px;
+  height: 30px;
+
+
+}
+
+button.tool {
+  width: 30px;
 }

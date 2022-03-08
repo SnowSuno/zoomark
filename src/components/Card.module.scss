@@ -1,12 +1,12 @@
 @import "variables";
 
 .card {
+  position: relative;
   width: 300px;
   height: 150px;
-  padding: 20px;
 
-  border: $border-gray 1px solid;
   border-radius: 10px;
+  background-color: #ffffff;
 
   display: flex;
   flex-direction: column;
@@ -16,13 +16,7 @@
 
   transition: border-color .1s ease, background-color .05s ease;
 
-  &:hover {
-    border-color: $theme-color;
-  }
 
-  &:active {
-    background-color: rgba($theme-color, 0.05);
-  }
 
   h1 {
     font-size: 20px;
@@ -30,5 +24,68 @@
 
   p {
     color: gray;
+  }
+}
+
+
+.clickable {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+
+  border: $border-gray 1px solid;
+  border-radius: inherit;
+
+  &:hover {
+    border-color: $theme-color;
+  }
+
+  &:active {
+    background-color: rgba($theme-color, 0.05);
+  }
+}
+
+.button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  background: none;
+
+  &:hover {
+    background-color: $hover-gray;
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 38px;
+  right: -30px;
+  z-index: 10;
+
+  width: 60px;
+  border-radius: 5px;
+
+  background: #fff;
+  box-shadow: 0 0 7px #e1e1e1;
+
+  overflow: hidden;
+
+  & > p {
+    font-size: 13px;
+    line-height: 30px;
+    padding-inline: 10px;
+
+    &:hover {
+      background-color: #f3f3f3;
+    }
   }
 }
