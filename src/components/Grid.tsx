@@ -21,7 +21,7 @@ function Grid() {
         {
             index: 1,
             id: 13248234,
-            name: "qwer2"
+            name: "qwer2asdfsadfewfewfwefewfwfe"
         },
         {
             index: 2,
