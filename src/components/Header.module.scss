@@ -1,0 +1,7 @@
+@import "variables";
+
+.header {
+  background-color: $background-gray;
+  height: 60px;
+  border-bottom: $border-gray 1px solid;
+}

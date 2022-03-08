@@ -1,4 +1,5 @@
 interface Meeting {
+    index: number;
     id: number;
     name: string;
     password?: string;

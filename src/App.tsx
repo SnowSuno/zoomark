@@ -2,7 +2,7 @@ import React from 'react';
 
 import {useDisplayInput} from "./common/hooks";
 
-import Input from "./components/atoms/Input";
+import Header from "./components/Header";
 import Grid from "./components/Grid";
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
 
     return (
         <div className="App">
+            <Header />
             <Grid />
         </div>
     );

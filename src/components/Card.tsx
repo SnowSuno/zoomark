@@ -13,8 +13,12 @@ function Card({meeting}: CardProps) {
 
 
     return (
-        <div className={styles.card}>
-            {meeting.name}
+        <div
+            className={styles.card}
+            onClick={() => console.log("clicked")}
+        >
+            <h1>{meeting.name}</h1>
+            <p>201 223 4203</p>
         </div>
     )
 }
