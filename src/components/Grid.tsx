@@ -9,35 +9,18 @@ import Drag from "./Drag";
 
 function Grid() {
     const [items, setItems] = useState<Meeting[]>([
-        // {
-        //     id: 23492384,
-        //     name: "줌 회의실 1"
-        // },
         {
+            id: "awer32rwdfwe32",
             index: 0,
-            id: 1234872,
-            name: "qwer1"
+            meetingId: 2316641223,
+            name: "일반화학 I"
         },
         {
+            id: "adsf2rwdsdffwe32",
             index: 1,
-            id: 13248234,
-            name: "qwer2asdfsadfewfewfwefewfwfe"
-        },
-        {
-            index: 2,
-            id: 23492384,
-            name: "3333"
-        },
-        {
-            index: 3,
-            id: 12343872,
-            name: "일반화학"
-        },
-        {
-            index: 4,
-            id: 132482324,
-            name: "4444"
-        },
+            meetingId: 2316641223,
+            name: "시스템 프로그래밍"
+        }
     ]);
 
     const moveCard = useCallback((dragIndex: number, hoverIndex: number) => {

@@ -1,9 +1,13 @@
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
-  justify-content: center;
+  //display: grid;
+  //grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+  //justify-content: center;
+
+  display: flex;
+  flex-wrap: wrap;
 
   gap: 10px;
 
+  width: 100%;
   padding: 30px 100px;
 }

@@ -1,6 +1,7 @@
 interface Meeting {
+    id: string;
     index: number;
-    id: number;
+    meetingId: number;
     name: string;
     password?: string;
     username?: string;
