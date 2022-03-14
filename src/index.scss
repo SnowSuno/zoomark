@@ -1,3 +1,5 @@
+@import "variables";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -16,4 +18,10 @@ code {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+input, button { border: none;
+  background-color: $dark-background;
+  border-radius: 8px;
+  height: 30px;
 }
