@@ -46,6 +46,10 @@ function Card({meeting}: CardProps) {
             >
                 <h1>{meeting.name}</h1>
                 <p>{zoomIdFormatter(meeting.meetingId.toString())}</p>
+                <div className={styles.indicators}>
+                    <div>{meeting.password && `🔑 ${meeting.password}`}</div>
+                    <div>{meeting.username && `👤 ${meeting.username}`}</div>
+                </div>
             </div>
 
 

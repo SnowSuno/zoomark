@@ -17,7 +17,6 @@
   transition: border-color .1s ease, background-color .05s ease;
 
 
-
   h1 {
     font-size: 20px;
     overflow: hidden;
@@ -45,6 +44,17 @@
 
   &:active {
     background-color: rgba($theme-color, 0.05);
+  }
+}
+
+.indicators {
+  padding: 8px 2px;
+  color: gray;
+
+  & > div {
+    //height: 25px;
+    line-height: 25px;
+    font-size: 13px;
   }
 }
 
