@@ -14,7 +14,7 @@ function Header({openModal}: HeaderProps) {
         <div className={styles.header}>
             <span>
                 <img src={logo} alt="logo"/>
-                <h1>Zom</h1>
+                <h1>Zom(야무진 이름 추천좀)</h1>
             </span>
             <div className={styles.toolBar}>
                 <input
