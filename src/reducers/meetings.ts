@@ -1,10 +1,12 @@
-import {Meeting, MeetingsModifier} from "../common/entities";
+import {v4 as uuid} from "uuid";
+
+import {MeetingCreate, Meeting, MeetingsModifier} from "../common/entities";
 
 const ADD = 'meetings/ADD' as const;
 const DELETE = 'meetings/DELETE' as const;
 const UPDATE = 'meetings/UPDATE' as const;
 
-export const addMeeting = (meeting: Meeting) => ({
+export const addMeeting = (meeting: MeetingCreate) => ({
     type: ADD,
     payload: {meeting}
 });
@@ -38,11 +40,13 @@ function meetings(
 ): MeetingsState {
     switch (action.type) {
         case ADD:
-            return state.data.some(
-                meeting => meeting.id === action.payload.meeting.id
-            )
-                ? state
-                : {data: state.data.concat(action.payload.meeting)};
+            return {
+                data: state.data.concat({
+                    ...action.payload.meeting,
+                    id: uuid(),
+                    index: state.data.length,
+                })
+            };
         case DELETE:
             return {
                 data: state.data.filter(

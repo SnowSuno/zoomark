@@ -1,6 +1,8 @@
 import React, {useRef, useState, useEffect} from "react";
 import styles from "./Card.module.scss";
 
+import {zoomIdFormatter} from "../common/utils";
+
 
 import {Meeting} from "../common/entities";
 
@@ -36,7 +38,7 @@ function Card({meeting}: CardProps) {
                 onClick={() => console.log("clicked")}
             >
                 <h1>{meeting.name}</h1>
-                <p>201 223 4203</p>
+                <p>{zoomIdFormatter(meeting.meetingId.toString())}</p>
             </div>
 
 
