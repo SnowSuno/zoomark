@@ -28,3 +28,14 @@
     width: 300px;
   }
 }
+
+.buttonWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  & > button {
+    width: 60px;
+  }
+}

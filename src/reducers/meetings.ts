@@ -1,7 +1,8 @@
-import {Meeting} from "../common/entities";
+import {Meeting, MeetingsModifier} from "../common/entities";
 
 const ADD = 'meetings/ADD' as const;
 const DELETE = 'meetings/DELETE' as const;
+const UPDATE = 'meetings/UPDATE' as const;
 
 export const addMeeting = (meeting: Meeting) => ({
     type: ADD,
@@ -13,9 +14,15 @@ export const deleteMeeting = (meeting: Meeting) => ({
     payload: {meeting}
 });
 
+export const updateMeetings = (modifier: MeetingsModifier) => ({
+    type: UPDATE,
+    payload: {modifier}
+})
+
 type MeetingsAction =
     | ReturnType<typeof addMeeting>
-    | ReturnType<typeof deleteMeeting>;
+    | ReturnType<typeof deleteMeeting>
+    | ReturnType<typeof updateMeetings>;
 
 type MeetingsState = {
     data: Meeting[];
@@ -42,6 +49,8 @@ function meetings(
                     meeting => meeting.meetingId !== action.payload.meeting.meetingId
                 )
             };
+        case UPDATE:
+            return {data: action.payload.modifier(state.data)};
         default:
             return state;
     }

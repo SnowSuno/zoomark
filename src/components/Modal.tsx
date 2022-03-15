@@ -46,9 +46,9 @@ function Modal({open, setOpen}: ModalProps) {
                 <input type="text"/>
                 입장 시 이름 설정
                 <input type="text"/>
-                <div>
+                <div className={styles.buttonWrapper}>
                     <button>취소</button>
-                    <button>참가</button>
+                    <button>추가</button>
                 </div>
             </div>
         </div>

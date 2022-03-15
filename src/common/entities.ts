@@ -7,7 +7,6 @@ interface Meeting {
     username?: string;
 }
 
+type MeetingsModifier = (prev: Meeting[]) => Meeting[]
 
-
-
-export type {Meeting};
+export type {Meeting, MeetingsModifier};
