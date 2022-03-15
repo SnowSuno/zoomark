@@ -50,7 +50,7 @@ function meetings(
         case DELETE:
             return {
                 data: state.data.filter(
-                    meeting => meeting.meetingId !== action.payload.meeting.meetingId
+                    meeting => meeting.id !== action.payload.meeting.id
                 )
             };
         case UPDATE:

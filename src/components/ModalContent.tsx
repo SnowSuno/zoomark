@@ -58,7 +58,10 @@ function ModalContent({close}: ModalContentProps) {
                     취소
                 </button>
                 <button
-                    onClick={add}
+                    onClick={() => {
+                        add();
+                        close();
+                    }}
                     disabled={!validate()}
                 >
                     추가

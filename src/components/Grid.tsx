@@ -13,21 +13,6 @@ interface GridProps {
 }
 
 function Grid({items, updateItems}: GridProps) {
-    // const [items, setItems] = useState<Meeting[]>([
-    //     {
-    //         id: "awer32rwdfwe32",
-    //         index: 0,
-    //         meetingId: 2316641223,
-    //         name: "일반화학 I"
-    //     },
-    //     {
-    //         id: "adsf2rwdsdffwe32",
-    //         index: 1,
-    //         meetingId: 2316641223,
-    //         name: "시스템 프로그래밍"
-    //     }
-    // ]);
-
     const moveCard = useCallback((dragIndex: number, hoverIndex: number) => {
         updateItems((prevCards: Meeting[]) =>
             update(prevCards, {
@@ -42,14 +27,17 @@ function Grid({items, updateItems}: GridProps) {
 
     return (
         <div className={styles.grid}>
-            {items.map((item, index) =>
-                <Drag
-                    key={item.id}
-                    index={index}
-                    move={moveCard}
-                >
-                    <Card meeting={item}/>
-                </Drag>)}
+            {items.length > 0
+                ? items.map((item, index) =>
+                    <Drag
+                        key={item.id}
+                        index={index}
+                        move={moveCard}
+                    >
+                        <Card meeting={item}/>
+                    </Drag>)
+                : <div>+ 를 눌러 방을 추가해 보세여</div>
+            }
         </div>
     )
 }

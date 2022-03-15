@@ -5,6 +5,8 @@ import {zoomIdFormatter} from "../common/utils";
 
 
 import {Meeting} from "../common/entities";
+import {useDispatch} from "react-redux";
+import {deleteMeeting} from "../reducers/meetings";
 
 
 interface CardProps {
@@ -12,26 +14,31 @@ interface CardProps {
 }
 
 function Card({meeting}: CardProps) {
+    const dispatch = useDispatch();
+
     const [showMenu, setShowMenu] = useState<boolean>(false);
     const menuRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-    const handleClickOutside =(event: any) => {
-      if (!menuRef.current?.contains(event.target)) {
-        setShowMenu(false);
-      }
+    const deleteSelf = () => {
+        dispatch(deleteMeeting(meeting));
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [menuRef, setShowMenu]);
+    useEffect(() => {
+        const handleClickOutside = (event: any) => {
+            if (!menuRef.current?.contains(event.target)) {
+                setShowMenu(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [menuRef, setShowMenu]);
 
     return (
         <div
             className={styles.card}
-
         >
             <div
                 className={styles.clickable}
@@ -53,7 +60,7 @@ function Card({meeting}: CardProps) {
             </button>
             {showMenu && <div className={styles.menu} ref={menuRef}>
                 <p>수정</p>
-                <p>삭제</p>
+                <p onClick={deleteSelf}>삭제</p>
             </div>}
         </div>
     )
