@@ -41,6 +41,7 @@ function ModalContent({close}: ModalContentProps) {
             className={styles.modal}
             onClick={e => e.stopPropagation()}
         >
+            {/*TODO: 참여링크로 채우기 기능*/}
             회의실 이름
             <input type="text" {...name} />
             회의실 주소
