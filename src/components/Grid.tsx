@@ -22,7 +22,7 @@ function Grid({items, updateItems}: GridProps) {
                 ],
             }),
         )
-    }, [])
+    }, [updateItems])
 
 
     return (
