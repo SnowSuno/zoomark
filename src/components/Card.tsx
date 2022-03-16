@@ -2,6 +2,7 @@ import React, {useRef, useState, useEffect} from "react";
 import styles from "./Card.module.scss";
 
 import {zoomIdFormatter} from "../common/utils";
+import {joinMeeting} from "../common/zoom";
 
 
 import {Meeting} from "../common/entities";
@@ -42,7 +43,7 @@ function Card({meeting}: CardProps) {
         >
             <div
                 className={styles.clickable}
-                onClick={() => console.log("clicked")}
+                onClick={() => joinMeeting(meeting)}
             >
                 <h1>{meeting.name}</h1>
                 <p>{zoomIdFormatter(meeting.meetingId.toString())}</p>

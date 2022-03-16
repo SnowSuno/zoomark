@@ -27,7 +27,7 @@ import isMobile from "is-mobile";
 import {Meeting} from "./entities";
 
 export const joinMeeting = (meeting: Meeting) => {
-    return buildURI({
+    window.location.href = buildURI({
         confno: meeting.meetingId,
         zc: 0,
         pwd: meeting.password,
