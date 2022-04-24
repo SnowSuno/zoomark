@@ -2,8 +2,9 @@
 
 .header {
   //background-color: $background-gray;
+  //background-color: #F2F2F5;
   height: 60px;
-  border-bottom: $border-gray 1px solid;
+  border-bottom: $line 1px solid;
 
   display: flex;
   flex-direction: row;
@@ -18,9 +19,13 @@
     gap: 10px;
     align-items: center;
 
-    img {
+    img:nth-child(1) {
       width: 35px;
       height: 35px;
+    }
+    img:nth-child(2) {
+      height: 30px;
+      width: 220px;
     }
 
     h1 {

@@ -35,11 +35,12 @@
   height: 100%;
   padding: 20px;
 
-  border: $border-gray 1px solid;
+  border: $border 1px solid;
   border-radius: inherit;
 
   &:hover {
-    border-color: $theme-color;
+    border-color: $border-hover;
+    background-color: $background-hover;
   }
 
   &:active {

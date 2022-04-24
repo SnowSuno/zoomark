@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Header.module.scss";
 import classNames from "classnames";
 import logo from "../logo.png";
+import logoText from "../assets/logo.svg";
 
 interface HeaderProps {
     openModal: () => void;
@@ -14,8 +15,8 @@ function Header({openModal}: HeaderProps) {
         <div className={styles.header}>
             <span>
                 <img src={logo} alt="logo"/>
-                <h1>디자인은 개나줘버린 Zom</h1>
-                <p>(야무진 이름 추천좀)</p>
+                <img src={logoText} alt="logotext"/>
+                {/*<h1>Zoomarks</h1>*/}
             </span>
             <div className={styles.toolBar}>
                 <input
