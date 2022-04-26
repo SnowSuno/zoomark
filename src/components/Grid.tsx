@@ -3,6 +3,7 @@ import styles from "./Grid.module.scss";
 
 import {Meeting, MeetingsModifier} from "../common/entities";
 import Card from "./Card";
+import AddCard from "./AddCard";
 
 import update from "immutability-helper";
 import Drag from "./Drag";
@@ -10,9 +11,10 @@ import Drag from "./Drag";
 interface GridProps {
     items: Meeting[],
     updateItems: (modifier: MeetingsModifier) => void;
+    openModal: () => void;
 }
 
-function Grid({items, updateItems}: GridProps) {
+function Grid({items, updateItems, openModal}: GridProps) {
     const moveCard = useCallback((dragIndex: number, hoverIndex: number) => {
         updateItems((prevCards: Meeting[]) =>
             update(prevCards, {
@@ -23,21 +25,20 @@ function Grid({items, updateItems}: GridProps) {
             }),
         )
     }, [updateItems])
-
-
+    
+    
     return (
         <div className={styles.grid}>
-            {items.length > 0
-                ? items.map((item, index) =>
-                    <Drag
-                        key={item.id}
-                        index={index}
-                        move={moveCard}
-                    >
-                        <Card meeting={item}/>
-                    </Drag>)
-                : <div>+ 를 눌러 방을 추가해 보세여</div>
-            }
+            {items.map((item, index) =>
+                <Drag
+                    key={item.id}
+                    index={index}
+                    move={moveCard}
+                >
+                    <Card meeting={item}/>
+                </Drag>
+            )}
+            <AddCard openModal={openModal}/>
         </div>
     )
 }

@@ -3,15 +3,16 @@
 .header {
   //background-color: $background-gray;
   //background-color: #F2F2F5;
-  height: 60px;
-  border-bottom: $line 1px solid;
+  height: 80px;
+  //margin-top: 20px;
+  //border-bottom: $line 1px solid;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
-  padding-inline: 100px;
+  padding-inline: $page-margin;
 
   & > span {
     display: flex;
@@ -24,8 +25,8 @@
       height: 35px;
     }
     img:nth-child(2) {
-      height: 30px;
-      width: 220px;
+      height: 26px;
+      //width: 1000px;
     }
 
     h1 {

@@ -2,22 +2,20 @@
 
 .card {
   position: relative;
-  width: 300px;
-  height: 150px;
 
-  border-radius: 10px;
   background-color: #ffffff;
 
   display: flex;
   flex-direction: column;
   gap: 5px;
 
-  cursor: pointer;
+
 
   transition: border-color .1s ease, background-color .05s ease;
 
 
   h1 {
+    color: #000;
     font-size: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -31,21 +29,26 @@
 
 
 .clickable {
-  width: 100%;
-  height: 100%;
+  @include card-style;
+  //width: 100%;
+  //height: 100%;
+  //width: $card-width;
+  //height: $card-height;
+  //
+  //border-radius: $card-border-radius;
   padding: 20px;
-
-  border: $border 1px solid;
-  border-radius: inherit;
-
-  &:hover {
-    border-color: $border-hover;
-    background-color: $background-hover;
-  }
-
-  &:active {
-    background-color: rgba($theme-color, 0.05);
-  }
+  //
+  //border: $border 1px solid;
+  ////border-radius: inherit;
+  //
+  //&:hover {
+  //  border-color: $border-hover;
+  //  background-color: $background-hover;
+  //}
+  //
+  //&:active {
+  //  background-color: rgba($theme-color, 0.05);
+  //}
 }
 
 .indicators {

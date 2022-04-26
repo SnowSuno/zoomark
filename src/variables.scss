@@ -17,3 +17,29 @@ $hover-gray: #eeeeee;
 $dark-background: #ededee;
 
 $theme-color: #008cff;
+
+$responsive-breakpoint: 768px;
+
+$page-margin: min(5%, 60px);
+
+$card-height: 150px;
+$card-width: 300px;
+
+@mixin card-style {
+  height: $card-height;
+  border-radius: 10px;
+  border: $border 1px solid;
+  color: $border;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $border-hover;
+    color: $border-hover;
+    background-color: $background-hover;
+  }
+
+  &:active {
+    background-color: rgba($theme-color, 0.05);
+  }
+}
+
