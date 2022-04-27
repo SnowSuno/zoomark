@@ -18,12 +18,17 @@ $dark-background: #ededee;
 
 $theme-color: #008cff;
 
-$responsive-breakpoint: 768px;
+$more-button: #4c4c59;
+
 
 $page-margin: min(5%, 60px);
 
 $card-height: 150px;
 $card-width: 300px;
+
+$grid-gap: 10px;
+
+$responsive-breakpoint: 680px;
 
 @mixin card-style {
   height: $card-height;

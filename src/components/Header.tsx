@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./Header.module.scss";
-import classNames from "classnames";
-import logo from "../logo.png";
+import logo from "../assets/zoomark.png";
 import logoText from "../assets/logo.svg";
 
-import settings from "../assets/settings.svg";
+import Settings from "./Settings";
+
 
 interface HeaderProps {
     openModal: () => void;
@@ -32,7 +32,7 @@ function Header({openModal}: HeaderProps) {
             {/*        +*/}
             {/*    </button>*/}
             {/*</div>*/}
-            <img src={settings} alt=""/>
+            <Settings/>
         </div>
     )
 }

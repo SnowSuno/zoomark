@@ -20,13 +20,17 @@ code {
   box-sizing: border-box;
 }
 
-input, button {
-  border: none;
-  background-color: #dedee3;
-  border-radius: 8px;
-  height: 30px;
-
-  &:hover {
-    background-color: #e6e6e9;
-  }
+button {
+  border: unset;
+  background: unset;
 }
+//input, button {
+//  border: none;
+//  background-color: #dedee3;
+//  border-radius: 8px;
+//  height: 30px;
+//
+//  &:hover {
+//    background-color: #e6e6e9;
+//  }
+//}

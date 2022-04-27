@@ -21,10 +21,6 @@
     text-overflow: ellipsis;
     padding-right: 12px;
   }
-
-  p {
-    color: gray;
-  }
 }
 
 
@@ -66,43 +62,27 @@
   position: absolute;
   top: 10px;
   right: 10px;
+  cursor: pointer;
 
   border: none;
   width: 25px;
   height: 25px;
-  border-radius: 50%;
+  border-radius: 8px;
 
   font-size: 15px;
   font-weight: 700;
 
   background: none;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   &:hover {
-    background-color: $hover-gray;
+    background-color: $background-hover;
   }
-}
 
-.menu {
-  position: absolute;
-  top: 38px;
-  right: -30px;
-  z-index: 10;
-
-  width: 60px;
-  border-radius: 5px;
-
-  background: #fff;
-  box-shadow: 0 0 7px #e1e1e1;
-
-  overflow: hidden;
-
-  & > p {
-    font-size: 13px;
-    line-height: 30px;
-    padding-inline: 10px;
-
-    &:hover {
-      background-color: #f3f3f3;
-    }
+  img {
+    width: 10px;
   }
 }
