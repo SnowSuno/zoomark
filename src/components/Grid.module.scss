@@ -1,13 +1,22 @@
+@import "src/variables";
+
 .grid {
   //display: grid;
   //grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
   //justify-content: center;
 
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $card-width);
+  //flex-wrap: wrap;
 
-  gap: 10px;
+  gap: $grid-gap;
 
   width: 100%;
-  padding: 30px 100px;
+  padding-inline: $page-margin;
+}
+
+@media screen and (max-width: $responsive-breakpoint) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }

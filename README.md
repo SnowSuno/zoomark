@@ -1,3 +1,3 @@
-# Pin Zoom
+# Zoomark
 
-A service to pin zoom meeting links in one place
+A service to bookmark zoom meeting links in one place

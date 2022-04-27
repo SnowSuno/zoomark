@@ -1,4 +1,15 @@
-$border-gray: #e7eaf1;
+$border: #c7c7c7;
+$border-hover: #909095;
+
+
+$background-hover: #f7f7fa;
+
+
+$line: #eceef3;
+
+
+
+
 $background-gray: #f4f4f5;
 
 $hover-gray: #eeeeee;
@@ -6,3 +17,34 @@ $hover-gray: #eeeeee;
 $dark-background: #ededee;
 
 $theme-color: #008cff;
+
+$more-button: #4c4c59;
+
+
+$page-margin: min(5%, 60px);
+
+$card-height: 150px;
+$card-width: 300px;
+
+$grid-gap: 10px;
+
+$responsive-breakpoint: 680px;
+
+@mixin card-style {
+  height: $card-height;
+  border-radius: 10px;
+  border: $border 1px solid;
+  color: $border;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $border-hover;
+    color: $border-hover;
+    background-color: $background-hover;
+  }
+
+  &:active {
+    background-color: rgba($theme-color, 0.05);
+  }
+}
+

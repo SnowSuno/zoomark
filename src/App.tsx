@@ -26,6 +26,7 @@ function App() {
             <Grid
                 items={items}
                 updateItems={updateItems}
+                openModal={() => setModalOpen(true)}
             />
             <Modal
                 open={modalOpen}
